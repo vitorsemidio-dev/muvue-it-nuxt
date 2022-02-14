@@ -22,7 +22,7 @@ export default {
 
 			state.xp = {
 				current: remainingXp,
-				state: 0,
+				start: 0,
 				end: experienceToNextLevel,
 			};
 			state.isLevelUpModalOpen = true;

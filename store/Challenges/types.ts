@@ -2,7 +2,7 @@ import { MutationTree } from 'vuex';
 
 export interface XP {
 	current: number;
-	state: number;
+	start: number;
 	end: number;
 }
 
