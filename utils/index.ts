@@ -1,4 +1,21 @@
+
+export const getRandomNumber = (min: number, max: number): number => {
+	return Math.floor(Math.random() * (max - min)) + min;
+};
+
 export const playAudio = (path: string) => new Audio(path).play();
+
+export const scrollToElement = (selector: string) => {
+	const element: HTMLElement | null = document.querySelector(selector);
+	const mq = window.matchMedia('(max-width: 639px)');
+
+	if (element && !mq.matches) {
+		element.scrollIntoView({
+			block: 'start',
+			behavior: 'smooth',
+		});
+	}
+};
 
 export const sendNotification = (title: string, options: object) => new Notification(title, options);
 

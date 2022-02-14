@@ -14,11 +14,13 @@ export default {
 
 		const shouldLevelUp = currentTotalXP >= end;
 
+		state.completedChallenges += 1;
+
 		if (shouldLevelUp) {
 			state.level += 1;
 
 			const remainingXp = currentTotalXP - end;
-			const experienceToNextLevel = Math.pow(state.level + 1, 2);
+			const experienceToNextLevel = Math.pow((state.level + 1) * 4, 2);
 
 			state.xp = {
 				current: remainingXp,
